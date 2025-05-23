@@ -1,0 +1,6 @@
+site_name: 杭州兵智-雷达无人机SpiritWing说明文档
+nav:
+  - 首页: index.md
+  - 无人机本体: drone.md
+  - 地面站软件: ground_station.md
+
