@@ -4,6 +4,7 @@
 
 ## 目录
 
-1. [无人机本体](drone.md)
+1. [无人机](drone.md)
 2. [地面站软件](ground_station.md)
+3. [协作者开发指南](doc_update.md)
 
