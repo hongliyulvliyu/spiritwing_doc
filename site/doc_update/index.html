@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>无人机本体 - 杭州兵智-雷达无人机SpiritWing说明文档</title>
+        <title>🤝 协作者开发指南：SpiritWing 说明文档 - 杭州兵智-雷达无人机SpiritWing说明文档</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/fontawesome.min.css" rel="stylesheet">
         <link href="../css/brands.min.css" rel="stylesheet">
@@ -38,7 +38,7 @@
                                 <a href=".." class="nav-link">首页</a>
                             </li>
                             <li class="nav-item">
-                                <a href="./" class="nav-link active" aria-current="page">无人机本体</a>
+                                <a href="../drone/" class="nav-link">无人机本体</a>
                             </li>
                             <li class="nav-item">
                                 <a href="../ground_station/" class="nav-link">地面站软件</a>
@@ -51,16 +51,6 @@
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
-                            <li class="nav-item">
-                                <a rel="prev" href=".." class="nav-link">
-                                    <i class="fa fa-arrow-left"></i> Previous
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a rel="next" href="../ground_station/" class="nav-link">
-                                    Next <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </li>
                     </ul>
                 </div>
             </div>
@@ -79,8 +69,32 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-bs-level="1"><a href="#_1" class="nav-link">无人机本体</a>
+            <li class="nav-item" data-bs-level="1"><a href="#spiritwing" class="nav-link">🤝 协作者开发指南：SpiritWing 说明文档</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#_1" class="nav-link">📦 项目简介</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_2" class="nav-link">🔧 环境要求</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_3" class="nav-link">📂 文档修改与结构说明</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_4" class="nav-link">🧪 本地预览</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_5" class="nav-link">📤 提交修改流程</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_6" class="nav-link">🚀 发布流程</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -88,14 +102,92 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="_1">无人机本体</h1>
-<p>SpiritWing 是杭州兵智推出的多用途雷达无人机平台。</p>
-<p><img alt="SpiritWing无人机" src="../assets/spiritwing.jpg" /></p>
+<h1 id="spiritwing">🤝 协作者开发指南：SpiritWing 说明文档</h1>
+<p>欢迎参与维护和完善本项目文档！本文档将帮助你快速了解协作流程。</p>
+<h2 id="_1">📦 项目简介</h2>
+<p>项目名称：杭州兵智-雷达无人机 SpiritWing 说明文档</p>
+<p>仓库地址：<code>https://github.com/hongliyulvliyu/spiritwing_doc</code></p>
+<p>预览地址：<code>https://hongliyulvliyu.github.io/spiritwing_doc/</code></p>
+<p><br></p>
+<h2 id="_2">🔧 环境要求</h2>
 <ul>
-<li>重量：3.2kg</li>
-<li>飞行时间：40分钟</li>
-<li>载荷接口：支持CAN/以太网</li>
-</ul></div>
+<li>
+<p>Python ≥ 3.8</p>
+</li>
+<li>
+<p>推荐使用 Anaconda（支持虚拟环境）</p>
+</li>
+<li>
+<p>安装依赖：</p>
+</li>
+</ul>
+<pre><code class="language-bash"># 1. 克隆项目
+git clone https://github.com/hongliyulvliyu/spiritwing_doc.git
+cd spiritwing_doc
+
+# 2. 创建虚拟环境
+conda create -n mkdocs-env python=3.9
+conda activate mkdocs-env
+
+# 3. 安装 MkDocs 及主题
+pip install mkdocs mkdocs-material
+</code></pre>
+<p><br></p>
+<h2 id="_3">📂 文档修改与结构说明</h2>
+<p>✅ 文档编写：
+在<code>docs</code>目录下编辑<code>.md</code>文件撰写内容，所有图片、压缩包等资源放在 <code>docs/assets/</code>下，文件路径引用使用相对路径，例如：</p>
+<pre><code class="language-markdown">![无人机](assets/spiritwing.jpg)
+[下载软件](assets/software.zip)
+</code></pre>
+<p>✅ 文档结构：</p>
+<pre><code>spiritwing_doc/
+├── docs/               # 所有 Markdown 文档放在这里
+│   ├── index.md        # 首页
+│   ├── drone.md        # 无人机本体
+│   ├── ground_station.md # 地面站软件
+│   └── assets/         # 图片和文件资源（如 .jpg、.zip）
+├── mkdocs.yml          # 文档配置文件
+├── site/               # 自动生成的网站文件（无需手动编辑）
+
+</code></pre>
+<p><br></p>
+<h2 id="_4">🧪 本地预览</h2>
+<p>在项目目录下运行：</p>
+<pre><code class="language-bash">mkdocs serve
+</code></pre>
+<p>浏览器访问 http://127.0.0.1:8000 查看文档效果。</p>
+<p><br></p>
+<h2 id="_5">📤 提交修改流程</h2>
+<blockquote>
+<p>所有协作者请通过以下流程进行修改和推送</p>
+</blockquote>
+<p>✅ 修改流程：</p>
+<pre><code class="language-bash"># 1. 切换主分支
+git checkout master
+
+# 2. 拉取最新代码
+git pull origin master
+
+# 3. 创建新分支（可选）
+git checkout -b update-xxx
+</code></pre>
+<p>✅ 提交修改：</p>
+<pre><code class="language-bash"># 添加并提交修改
+git add .
+git commit -m &quot;更新了 xxx 部分内容&quot;
+
+# 推送到远程分支
+git push origin update-xxx
+</code></pre>
+<p>✅ 创建 Pull Request（PR）
+在 GitHub 页面上提交 Pull Request，合并到主分支</p>
+<p><br></p>
+<h2 id="_6">🚀 发布流程</h2>
+<p>管理员帐号执行：</p>
+<pre><code>mkdocs build
+mkdocs gh-deploy
+</code></pre>
+<p>将文档部署到 GitHub Pages，并自动更新线上地址。</p></div>
             </div>
         </div>
 
